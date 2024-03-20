@@ -1,0 +1,45 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    color: gray;
+    padding: 0px 20px;
+    background-color: azure;
+}
+
+img {
+    border: 2px solid black;
+    display: block;
+    margin: auto;
+    padding: auto;
+    margin-bottom: 20px;
+}
+
+h1 {
+    background-color: lightgoldenrodyellow;
+    text-align: center;
+    color: goldenrod;
+    font-size: 40px;
+}
+
+h2 {
+    color: green;
+    margin: auto;
+}
+
+p, ol, ul {
+    background-color: beige;
+}
+
+p {
+    padding: 10px 15px;
+}
+
+ol, ul {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+a {
+    color: plum;
+    text-decoration: underline wavy pink;
+    
+}

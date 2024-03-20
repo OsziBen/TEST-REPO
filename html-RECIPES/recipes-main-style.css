@@ -1,0 +1,24 @@
+body {
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+.main {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    background-color:darkgrey;
+    color:crimson;
+    margin: 25px;
+    padding: 5px 10px;
+    display: inline;
+}
+
+li {
+    margin: 20px;
+}
+
+li a{
+    text-decoration: underline dotted;
+    color: blueviolet;
+}
