@@ -21,29 +21,22 @@ body {
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
   display: flex;
-  padding: 16px;
   gap: 16px;
+  padding: 16px;
 }
-
-.layer-21 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.layer-22 {
-    padding-top: 8px;
-    padding-bottom: 16px;
-}
-
 
 .header {
-    font-size: large;
-    font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
-.layer-23 {
-    display: flex;
-    gap: 4px;
+
+.text {
+  margin-bottom: 16px;
 }
 
 .icon {
@@ -57,6 +50,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .close-button {
