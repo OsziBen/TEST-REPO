@@ -96,3 +96,7 @@ console.log(Math.pow(x,2)); /* pow */
 
 /* typeof - type specificity */
 
+/* +"" : converts string into number */
+
+/* -- BITWISE OPERATORS -- */
+/* not so important right now */
