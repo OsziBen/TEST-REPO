@@ -75,7 +75,7 @@ console.log(Math.pow(x,2)); /* pow */
 /* number vs string */
 
 /* NaN - Not a Number; no possible conversion */
-/* using NaN is arithmetics returns NaN too */
+/* using NaN in arithmetics returns NaN too */
 /* isNaN() function for checking */
 
 /* Infinity / -Infinity */

@@ -15,8 +15,8 @@ console.log(multiply(3, 4));
 /* #3 : multiline arrow function */
 let capitalize = (string) => {
     firstLetter = string.charAt(0).toUpperCase();
-    restOdLetters = string.slice(1, string.length).toLowerCase();
-    return firstLetter + restOdLetters;
+    restOfLetters = string.slice(1, string.length).toLowerCase();
+    return firstLetter + restOfLetters;
 };
 
 console.log(capitalize("dashboard"));

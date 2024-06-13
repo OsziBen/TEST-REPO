@@ -1,5 +1,5 @@
 /* #1 */
-const string = "The revolution will ot be televised!";
+const string = "The revolution will not be televised!";
 console.log(string);
 
 const badString = string
