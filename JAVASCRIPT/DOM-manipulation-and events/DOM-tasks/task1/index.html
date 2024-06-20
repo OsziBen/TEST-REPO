@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM task #1</title>
+</head>
+<body>
+    <h1>Mountains</h1>
+
+<div id="mountains"></div>
+
+<script>
+  const MOUNTAINS = [
+    {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
+    {name: "Everest", height: 8848, place: "Nepal"},
+    {name: "Mount Fuji", height: 3776, place: "Japan"},
+    {name: "Vaalserberg", height: 323, place: "Netherlands"},
+    {name: "Denali", height: 6168, place: "United States"},
+    {name: "Popocatepetl", height: 5465, place: "Mexico"},
+    {name: "Mont Blanc", height: 4808, place: "Italy/France"}
+  ];
+
+  // Your code here
+    // get the property names from first row
+    const props = Object.getOwnPropertyNames(MOUNTAINS[0]);
+    // adding the table to element with "mountain" id
+    const hegyek = document.querySelector("#mountains");
+    const tabla = document.createElement("table");
+    // adding the table header
+    const fejlec = document.createElement("tr")
+    tabla.appendChild(fejlec);
+    
+    props.forEach(element => {
+        const akt = document.createElement("th");
+        akt.appendChild(document.createTextNode(element));
+        fejlec.appendChild(akt);
+    });
+    // adding the table rows
+    MOUNTAINS.forEach(element => {
+        const actRow = document.createElement("tr");
+        // adding the table cols for each row
+        const actRowValues = Object.values(element);
+        actRowValues.forEach(val => {
+            const actCol = document.createElement("td");
+            actCol.appendChild(document.createTextNode(val));
+            actRow.appendChild(actCol);
+        });
+
+        tabla.appendChild(actRow);
+    });
+
+    hegyek.appendChild(tabla);
+    tabla.style.textAlign = "right";
+    
+</script>
+</body>
+</html>
