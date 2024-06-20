@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon task</title>
+</head>
+<body>
+
+    <p>🎈</p>
+
+    <script>
+      const balloon = document.querySelector("p");
+      let currentSizeInPx = 75;
+      balloon.style.fontSize = currentSizeInPx+"px";
+
+      function changeBalloonSize(e){
+        if(e.key === "ArrowUp"){
+            e.preventDefault();
+            currentSizeInPx += (currentSizeInPx * 0,1);
+            balloon.style.fontSize = currentSizeInPx+"px";
+        } else if(e.key == "ArrowDown"){
+            e.preventDefault();
+            currentSizeInPx -= (currentSizeInPx * 0,1);
+            balloon.style.fontSize = currentSizeInPx+"px";
+        }
+        if(currentSizeInPx >= 100){
+            balloon.textContent = "💥";
+            window.removeEventListener("keydown", changeBalloonSize);
+        }
+      }
+
+      window.addEventListener("keydown", changeBalloonSize);
+console.log(currentSizeInPx);
+
+    </script>
+
+</body>
+</html>
