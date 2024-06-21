@@ -1,3 +1,6 @@
+let playerScore = 0;
+let computerScore = 0;
+
 function getComputerChoice(){
     let ComputerChoice;
     
@@ -16,42 +19,63 @@ function getComputerChoice(){
     return ComputerChoice;
 }
 
-function playRound(playerSelection, computerSelection){
-    playerSelection = capitalizeText(playerSelection);
-
-    /* INVALID PLAYER INPUT */
-    if(!isPlayerInputValid(playerSelection)) return `Error! \'${playerSelection}\' is not a valid input!`;
-
-    /* TIE */
-    if(playerSelection === computerSelection){
-        return `Tie! ${playerSelection} ties with ${computerSelection}!`;
-    } else
-    /* WIN */
-    if(playerSelection === "Rock" && computerSelection === "Scissors"
-    ||
-    playerSelection === "Paper" && computerSelection === "Rock"
-    ||
-    playerSelection === "Scissors" && computerSelection === "Paper"){
-        return `You Win! ${playerSelection} beats ${computerSelection}!`;
-    } else
-    /* LOSE */
-    return `You Lose! ${computerSelection} beats ${playerSelection}!`;
-}
-
-function playGame(){
-    for(i = 0; i < 5; i++){
-        
-        console.log(playRound((window.prompt("Rock, Paper, Scissors!")), getComputerChoice()))
+function playRound(playerSelection){
+    if(isGameOver()){
+        displayWinner();
+    } else {
+        computerSelection = getComputerChoice();
+        let result = "";
+        // TIE //
+        if(playerSelection === computerSelection){
+            result = (`Tie! ${playerSelection} ties with ${computerSelection}!`);
+        } else
+        // WIN //
+        if(playerSelection === "Rock" && computerSelection === "Scissors"
+        ||
+        playerSelection === "Paper" && computerSelection === "Rock"
+        ||
+        playerSelection === "Scissors" && computerSelection === "Paper"){
+            result = (`You Win! ${playerSelection} beats ${computerSelection}!`);
+            playerScore++;
+        } else {
+        // LOSE //
+            result = (`You Lose! ${computerSelection} beats ${playerSelection}!`);
+            computerScore++;
+        }
+        displayTurnScore(result);
+        displayGameScore();
+    }
+    if(isGameOver()){
+        displayWinner();
     }
 }
 
-function capitalizeText(text){
-    
-    return text.charAt(0).toUpperCase() + text.slice(1, text.length).toLowerCase();
+function displayTurnScore(result){
+    turnScore.textContent = result;
 }
 
-function isPlayerInputValid(playerInput){
-    return (playerInput == "Rock" || playerInput == "Paper" || playerInput == "Scissors");
+function displayGameScore(){
+    gameScore.textContent = `Player: ${playerScore} - Computer: ${computerScore}`;
 }
 
-playGame();
+function isGameOver(){
+    return playerScore === 5 || computerScore === 5;
+}
+
+function displayWinner(){
+    if(playerScore === 5){
+        alert("Player Wins!");
+    } else {
+        alert("Computer Wins!");
+    }
+}
+
+const rockBtn = document.getElementById("rock-btn");
+const paperBtn = document.getElementById("paper-btn");
+const scissorsBtn = document.getElementById("scissors-btn");
+const gameScore = document.getElementById("game-score");
+const turnScore = document.getElementById("turn-score");
+
+rockBtn.addEventListener("click", () => playRound("Rock"));
+paperBtn.addEventListener("click", () => playRound("Paper"));
+scissorsBtn.addEventListener("click", () => playRound("Scissors"));
