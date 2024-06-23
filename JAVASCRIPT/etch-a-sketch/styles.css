@@ -1,0 +1,28 @@
+#container {
+    border: 10px solid black;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.cell {
+    background-color: white;
+    flex: 1;
+}
+
+#number-of-squares {
+    width: 4em;
+}
+
+#settings {
+    display: flex;
+    flex-direction: column;
+}

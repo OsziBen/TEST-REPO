@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <script src="./scripts.js" defer ></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="main-title">Etch-a-Sketch</h1>
+    </header>
+    <main>
+        <div id="settings">
+            <div class="clear-settings">
+                <button id="clear">CLEAR</button>
+            </div>
+           <div class="size-settings">
+               <label for="number-of-squares">Number of squares (between 1 and 100): </label>
+               <input type="number" id="number-of-squares" min="1" max="100" value="16">
+           </div>
+           <div class="style-settings">
+            <div class="color">
+                <label for="random-color">Color: </label>
+                <input type="checkbox" id="random-color">
+            </div>
+        </div>
+
+        </div>
+        <div id="container" class="color"></div>
+    </main>
+    <footer></footer>
+</body>
+</html>
