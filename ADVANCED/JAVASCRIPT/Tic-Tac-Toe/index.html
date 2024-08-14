@@ -8,6 +8,50 @@
     <script src="./script.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <h1>Tic-Tac-Toe</h1>
+    </header>
+    <main>
+        <div class="menu">
+            <div class="score-section">
+                <button id="edit-player1-name-btn" type="button" title="Change Name"><img src="./icons/edit-icon.svg" alt="edit player name"></button>
+                <p class="score-display">SCORE</p>
+                <button id="edit-player2-name-btn" type="button" title="Change Name"><img src="./icons/edit-icon.svg" alt="edit player name"></button>
+            </div>
+            <div class="turn-section">
+                <p class="info-display">TURN</p>
+                <button class="restart-btn" type="button">RESTART</button>
+            </div>
+        </div>
+        <div class="grid">
+            <div id="0" class="cell"></div>
+            <div id="1" class="cell"></div>
+            <div id="2" class="cell"></div>
+            <div id="3" class="cell"></div>
+            <div id="4" class="cell"></div>
+            <div id="5" class="cell"></div>
+            <div id="6" class="cell"></div>
+            <div id="7" class="cell"></div>
+            <div id="8" class="cell"></div>
+        </div>
+    </main>
+    <div id="notification-overlay" class="overlay">
+        <div id="notification-modal" class="modal">
+            <div id="notification-message"></div>
+            <button id="notification-back-btn" type="button">BACK</button>
+        </div>
+    </div>
+    <div id="name-change-overlay" class="overlay">
+        <div id="name-change-modal" class="modal">
+            <h3>Change Name</h3>
+            <form action="" id="name-change-form" method="post">
+                <input type="text" name="new-name" id="name-change-field" value="" required>
+            <div id="name-change-buttons">
+                <button id="name-change-back-btn" type="button">BACK</button>
+                <button type="submit" id="name-change-confirm-btn">CONFIRM</button>
+            </div>
+        </form>
+        </div>
+    </div>
 </body>
 </html>
