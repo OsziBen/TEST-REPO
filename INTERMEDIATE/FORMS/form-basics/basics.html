@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>FORMS</h1>
+    <form action="example.com/path" method="post">
+        <h2>Input elements:</h2>
+        <label for="name">Name: </label>
+        <input type="text" id="name" placeholder="John Smith" name="name">
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" placeholder="you@example.com">
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password">
+        <label for="number">Number: </label>
+        <input type="number" name="number" id="number">
+        <label for="date">Date: </label>
+        <input type="date" name="date" id="date">
+        <label for="textarea">Textarea: </label>
+        <textarea name="textarea" id="textarea" placeholder="Enter your text..." rows="20" cols="60"></textarea>
+        <h2>Selection elements</h2>
+        <select name="select" id="select">
+            <optgroup label="Optgroup One">
+                <option value="option1">Option 1</option>
+            </optgroup>
+            <optgroup label="Optgroup Two">
+                <option value="option2" selected>Option 2</option>
+            </optgroup>
+        </select>
+        <label for="radio1">Radio 1 </label>
+        <input type="radio" name="radio" id="radio1" value="r1">
+        <label for="radio2">Radio 2 </label>
+        <input type="radio" name="radio" id="radio2" value="r2" checked>
+        <label for="checkbox1">Checkbox 1 </label>
+        <input type="checkbox" name="checkbox" id="checkbox1" value="c1">
+        <label for="checkbox2">Checkbox 2 </label>
+        <input type="checkbox" name="checkbox" id="checkbox2" value="c2" checked>
+        <button type="button">Button</button>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <h2>Organizing input fields</h2>
+        <fieldset>
+            <legend>Legend</legend>
+            <label for="name">Name: </label>
+            <input type="text" id="name" placeholder="John Smith" name="name">
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" placeholder="you@example.com">
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password">
+            <label for="number">Number: </label>
+            <input type="number" name="number" id="number">
+            <label for="date">Date: </label>
+            <input type="date" name="date" id="date">
+        </fieldset>
+    </form>
+</body>
+</html>
